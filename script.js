@@ -1,16 +1,5 @@
-// ============================================================
-// KONFIGURASI GOOGLE SPREADSHEET
-// Format sheet Produk: Nama | Kategori | Harga | Stok | Gambar (URL)
-// Pastikan spreadsheet dibagikan ke publik (Anyone with link - Viewer)
-// ============================================================
-const SPREADSHEET_ID = '1iOYomM1rKKLfHyG-lJ3BBEUEnY-BSAMM7v_9zAxqOYo';
-const SHEET_NAME = 'Produk';
-const API_KEY = 'GANTI_DENGAN_API_KEY_GOOGLE_ANDA';
-
 // URL Google Apps Script Web App untuk menyimpan pesanan
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbHrJ_aJstK6U6jX3_QtWTV8asRM654LcpX2cYoHSvRM7VqWl6h5QuU9snNcVHO1yI/exec';
-
-const SHEETS_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
 
 // Nomor WhatsApp toko (format internasional tanpa +)
 const WA_NUMBER = '6282334899699';
@@ -21,20 +10,24 @@ const WA_NUMBER = '6282334899699';
 // Gambar: taruh file di folder img/ lalu tulis 'img/namafile.jpg'
 // ============================================================
 const PRODUK_STATIS = [
-  { id: 0,  nama: 'Kemeja Wanita',            kategori: 'Wanita', harga: 188000, stok: 35, gambar: 'https://images.unsplash.com/photo-1594938298603-c8148c4b4e5b?w=400&h=400&fit=crop' },
-  { id: 1,  nama: 'Kaos Wanita',              kategori: 'Wanita', harga: 75000,  stok: 11, gambar: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop' },
-  { id: 2,  nama: 'Jaket Jeans',              kategori: 'Wanita', harga: 285000, stok: 10, gambar: 'https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=400&h=400&fit=crop' },
-  { id: 3,  nama: 'Piyama Panjang',           kategori: 'Wanita', harga: 175000, stok: 12, gambar: 'https://images.unsplash.com/photo-1631947430066-48c30d57b943?w=400&h=400&fit=crop' },
-  { id: 4,  nama: 'Piyama Perempuan Panjang', kategori: 'Wanita', harga: 160000, stok: 8,  gambar: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=400&h=400&fit=crop' },
-  { id: 5,  nama: 'Piyama Perempuan Pendek',  kategori: 'Wanita', harga: 150000, stok: 14, gambar: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop' },
-  { id: 6,  nama: 'Daster Kutungan',          kategori: 'Wanita', harga: 120000, stok: 18, gambar: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=400&fit=crop' },
-  { id: 7,  nama: 'Daster Rompi',             kategori: 'Wanita', harga: 110000, stok: 20, gambar: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop' },
-  { id: 8,  nama: 'Daster Pantai',            kategori: 'Wanita', harga: 115000, stok: 9,  gambar: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=400&fit=crop' },
-  { id: 9,  nama: 'Daster Serut',             kategori: 'Wanita', harga: 120000, stok: 7,  gambar: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=400&fit=crop' },
-  { id: 10, nama: 'Daster Payung',            kategori: 'Wanita', harga: 105000, stok: 25, gambar: 'https://images.unsplash.com/photo-1566206091558-7f218b696731?w=400&h=400&fit=crop' },
-  { id: 11, nama: 'Daster Kancing Depan',     kategori: 'Wanita', harga: 95000,  stok: 16, gambar: 'https://images.unsplash.com/photo-1583846783214-7229a91b20ed?w=400&h=400&fit=crop' },
-  { id: 12, nama: 'Daster Standart',          kategori: 'Wanita', harga: 98000,  stok: 20, gambar: 'https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=400&h=400&fit=crop' },
-  { id: 13, nama: 'Celana Jeans',             kategori: 'Wanita', harga: 255000, stok: 13, gambar: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop' },
+  { id: 0,  nama: 'Kemeja Flannel Wanita',     kategori: 'Wanita', harga: 185000, stok: 20, gambar: 'img/Kemeja Flannel Wanita.jpg' },
+  { id: 1,  nama: 'Blush Wanita',              kategori: 'Wanita', harga: 145000, stok: 15, gambar: 'img/Blush wanita.jpg' },
+  { id: 2,  nama: 'Jaket Hoodie',              kategori: 'Wanita', harga: 210000, stok: 10, gambar: 'img/Hoodie Cewek.jpg' },
+  { id: 3,  nama: 'Piyama Panjang Pendek',     kategori: 'Wanita', harga: 175000, stok: 12, gambar: 'img/piyama panjang pendek.jpg' },
+  { id: 4,  nama: 'Piyama Perempuan Panjang',  kategori: 'Wanita', harga: 160000, stok: 8,  gambar: 'img/Piyama Panjang.jpg' },
+  { id: 5,  nama: 'Piyama Perempuan Pendek',   kategori: 'Wanita', harga: 150000, stok: 14, gambar: 'img/Piyama Pendek.jpg' },
+  { id: 6,  nama: 'Piyama',                    kategori: 'Wanita', harga: 155000, stok: 10, gambar: 'img/Piyama.jpg' },
+  { id: 7,  nama: 'Daster Kutungan',           kategori: 'Wanita', harga: 120000, stok: 18, gambar: 'img/Daster kutungan.jpg' },
+  { id: 8,  nama: 'Daster Rompi',              kategori: 'Wanita', harga: 110000, stok: 20, gambar: 'img/Daster Rompi.jpg' },
+  { id: 9,  nama: 'Daster Pantai',             kategori: 'Wanita', harga: 115000, stok: 9,  gambar: 'img/Daster Pantai.png' },
+  { id: 10, nama: 'Daster Serut',              kategori: 'Wanita', harga: 120000, stok: 7,  gambar: 'img/daster.jpg' },
+  { id: 11, nama: 'Daster Payung',             kategori: 'Wanita', harga: 105000, stok: 25, gambar: 'img/daster payung.jpg' },
+  { id: 12, nama: 'Daster Kancing Depan',      kategori: 'Wanita', harga: 95000,  stok: 16, gambar: 'img/daster kancing depan.jpg' },
+  { id: 13, nama: 'Daster Standart',           kategori: 'Wanita', harga: 98000,  stok: 20, gambar: 'img/daster standart.jpg' },
+  { id: 14, nama: 'Kemeja Wanita',             kategori: 'Wanita', harga: 188000, stok: 35, gambar: 'img/kemeja wanita.jpg' },
+  { id: 15, nama: 'Kaos Wanita',               kategori: 'Wanita', harga: 75000,  stok: 11, gambar: 'img/Kaos perempuan.jpg' },
+  { id: 16, nama: 'Jaket Jeans',               kategori: 'Wanita', harga: 285000, stok: 10, gambar: 'img/jaket jeans.jpg' },
+  { id: 17, nama: 'Celana Jeans',              kategori: 'Wanita', harga: 255000, stok: 13, gambar: 'img/celana jeans.jpg' },
 ];
 
 // Gambar fallback jika foto belum ada
@@ -101,46 +94,14 @@ function terapkanFotoOverride(produkList) {
 let semuaProduk = [];
 let keranjang = [];
 
-// Ambil data dari Google Sheets, fallback ke data statis
-async function ambilProduk() {
+// Muat produk dari data statis
+function ambilProduk() {
   const loading = document.getElementById('loading');
   loading.style.display = 'block';
-
-  if (API_KEY === 'GANTI_DENGAN_API_KEY_GOOGLE_ANDA') {
-    semuaProduk = PRODUK_STATIS;
-    terapkanFotoOverride(semuaProduk);
-    loading.style.display = 'none';
-    tampilkanProduk(semuaProduk);
-    return;
-  }
-
-  try {
-    const res = await fetch(SHEETS_URL);
-    if (!res.ok) throw new Error('Gagal mengambil data');
-    const data = await res.json();
-
-    const rows = data.values.slice(1);
-    semuaProduk = rows.map((row, i) => ({
-      id: i,
-      nama: row[0] || '',
-      // Normalisasi kategori: huruf pertama kapital
-      kategori: (row[1] || '').trim().replace(/^\w/, c => c.toUpperCase()),
-      // Bersihkan harga: hapus titik/koma lalu parse
-      harga: parseInt((row[2] || '0').toString().replace(/[.,]/g, '')) || 0,
-      stok: parseInt(row[3]) || 0,
-      gambar: row[4] || GAMBAR_DEFAULT
-    }));
-
-    terapkanFotoOverride(semuaProduk);
-    loading.style.display = 'none';
-    tampilkanProduk(semuaProduk);
-  } catch (err) {
-    console.warn('Spreadsheet gagal, pakai data statis:', err);
-    semuaProduk = PRODUK_STATIS;
-    terapkanFotoOverride(semuaProduk);
-    loading.style.display = 'none';
-    tampilkanProduk(semuaProduk);
-  }
+  semuaProduk = PRODUK_STATIS;
+  terapkanFotoOverride(semuaProduk);
+  loading.style.display = 'none';
+  tampilkanProduk(semuaProduk);
 }
 
 // Render kartu produk
