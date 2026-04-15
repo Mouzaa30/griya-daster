@@ -21,20 +21,20 @@ const WA_NUMBER = '6282334899699';
 // Gambar: taruh file di folder img/ lalu tulis 'img/namafile.jpg'
 // ============================================================
 const PRODUK_STATIS = [
-  { id: 0,  nama: 'Kemeja Wanita',                  kategori: 'Wanita', harga: 188000, stok: 35, gambar: 'img/kemeja wanita.jpg' },
-  { id: 1,  nama: 'Kaos Wanita',                    kategori: 'Wanita', harga: 75000,  stok: 11, gambar: 'img/Kaos perempuan.jpg' },
-  { id: 2,  nama: 'Jaket Jeans',                    kategori: 'Wanita', harga: 285000, stok: 10, gambar: 'img/jaket jeans.jpg' },
-  { id: 3,  nama: 'Piyama Panjang',                 kategori: 'Wanita', harga: 175000, stok: 12, gambar: 'img/Piyama.jpg' },
-  { id: 4,  nama: 'Piyama Perempuan Panjang',       kategori: 'Wanita', harga: 160000, stok: 8,  gambar: 'img/Piyama Panjang.jpg' },
-  { id: 5,  nama: 'Piyama Perempuan Pendek',        kategori: 'Wanita', harga: 150000, stok: 14, gambar: 'img/Piyama Pendek.jpg' },
-  { id: 6,  nama: 'Daster Kutungan',                kategori: 'Wanita', harga: 120000, stok: 18, gambar: 'img/Daster kutungan.jpg' },
-  { id: 7,  nama: 'Daster Rompi',                   kategori: 'Wanita', harga: 110000, stok: 20, gambar: 'img/Daster Rompi.jpg' },
-  { id: 8,  nama: 'Daster Pantai',                  kategori: 'Wanita', harga: 115000, stok: 9,  gambar: 'img/Daster Pantai.png' },
-  { id: 9,  nama: 'Daster Serut',                   kategori: 'Wanita', harga: 120000, stok: 7,  gambar: 'img/daster.jpg' },
-  { id: 10, nama: 'Daster Payung',                  kategori: 'Wanita', harga: 105000, stok: 25, gambar: 'img/daster payung.jpg' },
-  { id: 11, nama: 'Daster Kancing Depan',           kategori: 'Wanita', harga: 95000,  stok: 16, gambar: 'img/daster kancing depan.jpg' },
-  { id: 12, nama: 'Daster Standart',                kategori: 'Wanita', harga: 98000,  stok: 20, gambar: 'img/daster standart.jpg' },
-  { id: 13, nama: 'Celana Jeans',                   kategori: 'Wanita', harga: 255000, stok: 13, gambar: 'img/celana jeans.jpg' },
+  { id: 0,  nama: 'Kemeja Wanita',            kategori: 'Wanita', harga: 188000, stok: 35, gambar: 'https://images.unsplash.com/photo-1594938298603-c8148c4b4e5b?w=400&h=400&fit=crop' },
+  { id: 1,  nama: 'Kaos Wanita',              kategori: 'Wanita', harga: 75000,  stok: 11, gambar: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop' },
+  { id: 2,  nama: 'Jaket Jeans',              kategori: 'Wanita', harga: 285000, stok: 10, gambar: 'https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=400&h=400&fit=crop' },
+  { id: 3,  nama: 'Piyama Panjang',           kategori: 'Wanita', harga: 175000, stok: 12, gambar: 'https://images.unsplash.com/photo-1631947430066-48c30d57b943?w=400&h=400&fit=crop' },
+  { id: 4,  nama: 'Piyama Perempuan Panjang', kategori: 'Wanita', harga: 160000, stok: 8,  gambar: 'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=400&h=400&fit=crop' },
+  { id: 5,  nama: 'Piyama Perempuan Pendek',  kategori: 'Wanita', harga: 150000, stok: 14, gambar: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop' },
+  { id: 6,  nama: 'Daster Kutungan',          kategori: 'Wanita', harga: 120000, stok: 18, gambar: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=400&fit=crop' },
+  { id: 7,  nama: 'Daster Rompi',             kategori: 'Wanita', harga: 110000, stok: 20, gambar: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop' },
+  { id: 8,  nama: 'Daster Pantai',            kategori: 'Wanita', harga: 115000, stok: 9,  gambar: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=400&fit=crop' },
+  { id: 9,  nama: 'Daster Serut',             kategori: 'Wanita', harga: 120000, stok: 7,  gambar: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=400&fit=crop' },
+  { id: 10, nama: 'Daster Payung',            kategori: 'Wanita', harga: 105000, stok: 25, gambar: 'https://images.unsplash.com/photo-1566206091558-7f218b696731?w=400&h=400&fit=crop' },
+  { id: 11, nama: 'Daster Kancing Depan',     kategori: 'Wanita', harga: 95000,  stok: 16, gambar: 'https://images.unsplash.com/photo-1583846783214-7229a91b20ed?w=400&h=400&fit=crop' },
+  { id: 12, nama: 'Daster Standart',          kategori: 'Wanita', harga: 98000,  stok: 20, gambar: 'https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=400&h=400&fit=crop' },
+  { id: 13, nama: 'Celana Jeans',             kategori: 'Wanita', harga: 255000, stok: 13, gambar: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop' },
 ];
 
 // Gambar fallback jika foto belum ada
