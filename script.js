@@ -21,10 +21,10 @@ const WA_NUMBER = '6282334899699';
 // Gambar: taruh file di folder img/ lalu tulis 'img/namafile.jpg'
 // ============================================================
 const PRODUK_STATIS = [
-  { id: 0,  nama: 'Kemeja Flannel Kotak',          kategori: 'Wanita', harga: 185000, stok: 20, gambar: 'img/Kemeja Flannel Wanita.jpg' },
-  { id: 1,  nama: 'Blush Wanita',                  kategori: 'Wanita', harga: 145000, stok: 15, gambar: 'img/Blush wanita.jpg' },
-  { id: 2,  nama: 'Jaket Hoodie Polos',             kategori: 'Wanita', harga: 210000, stok: 10, gambar: 'img/Hoodie Cewek.jpg' },
-  { id: 3,  nama: 'Piyama Panjang Lengan Pendek',   kategori: 'Wanita', harga: 175000, stok: 12, gambar: 'img/piyama panjang pendek.jpg' },
+  { id: 0,  nama: 'Kemeja Wanita',                  kategori: 'Wanita', harga: 188000, stok: 35, gambar: 'img/kemeja wanita.jpg' },
+  { id: 1,  nama: 'Kaos Wanita',                    kategori: 'Wanita', harga: 75000,  stok: 11, gambar: 'img/Kaos perempuan.jpg' },
+  { id: 2,  nama: 'Jaket Jeans',                    kategori: 'Wanita', harga: 285000, stok: 10, gambar: 'img/jaket jeans.jpg' },
+  { id: 3,  nama: 'Piyama Panjang',                 kategori: 'Wanita', harga: 175000, stok: 12, gambar: 'img/Piyama.jpg' },
   { id: 4,  nama: 'Piyama Perempuan Panjang',       kategori: 'Wanita', harga: 160000, stok: 8,  gambar: 'img/Piyama Panjang.jpg' },
   { id: 5,  nama: 'Piyama Perempuan Pendek',        kategori: 'Wanita', harga: 150000, stok: 14, gambar: 'img/Piyama Pendek.jpg' },
   { id: 6,  nama: 'Daster Kutungan',                kategori: 'Wanita', harga: 120000, stok: 18, gambar: 'img/Daster kutungan.jpg' },
@@ -33,10 +33,8 @@ const PRODUK_STATIS = [
   { id: 9,  nama: 'Daster Serut',                   kategori: 'Wanita', harga: 120000, stok: 7,  gambar: 'img/daster.jpg' },
   { id: 10, nama: 'Daster Payung',                  kategori: 'Wanita', harga: 105000, stok: 25, gambar: 'img/daster payung.jpg' },
   { id: 11, nama: 'Daster Kancing Depan',           kategori: 'Wanita', harga: 95000,  stok: 16, gambar: 'img/daster kancing depan.jpg' },
-  { id: 12, nama: 'Kemeja Wanita',                  kategori: 'Wanita', harga: 188000, stok: 35, gambar: 'img/kemeja wanita.jpg' },
-  { id: 13, nama: 'Kaos Wanita',                    kategori: 'Wanita', harga: 75000,  stok: 11, gambar: 'img/Kaos perempuan.jpg' },
-  { id: 14, nama: 'Jaket Jeans',                    kategori: 'Wanita', harga: 285000, stok: 10, gambar: 'img/jaket jeans.jpg' },
-  { id: 15, nama: 'Celana Jeans',                   kategori: 'Wanita', harga: 255000, stok: 13, gambar: 'img/celana jeans.jpg' },
+  { id: 12, nama: 'Daster Standart',                kategori: 'Wanita', harga: 98000,  stok: 20, gambar: 'img/daster standart.jpg' },
+  { id: 13, nama: 'Celana Jeans',                   kategori: 'Wanita', harga: 255000, stok: 13, gambar: 'img/celana jeans.jpg' },
 ];
 
 // Gambar fallback jika foto belum ada
